@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+  <title>Derek Li</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<body class="bg-zinc-800">
+  <div class="h-screen flex place-items-center flex-col">
+    <nav class="flex items-center justify-between flex-wrap bg-zinc-800 p-6 fade">
+      <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <span class="font-semibold text-xl tracking-tight">Derek Li</span>
+      </div>
+      <div class="block lg:hidden">
+        <button
+          class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div class="text-sm lg:flex-grow float-right">
+          <a href="#about-me" class="block mt-4 lg:inline-block lg:mt-0 text-zinc-300 hover:text-white mr-4">
+            About me
+          </a>
+          <a href="#portfolio" class="block mt-4 lg:inline-block lg:mt-0 text-zinc-300 hover:text-white mr-4">
+
+          </a>
+          <a href="#experience" class="block mt-4 lg:inline-block lg:mt-0 text-zinc-300 hover:text-white mr-4">
+            Experience
+          </a>
+          <a href="#extra-curriculars" class="block mt-4 lg:inline-block lg:mt-0 text-zinc-300 hover:text-white mr-4">
+            Extra-Curriculars
+          </a>
+          <a href="#skills" class="block mt-4 lg:inline-block lg:mt-0 text-zinc-300 hover:text-white">
+            Skills
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="place-items-center m-auto">
+      <h1 class="m-auto font-semibold text-6xl tracking-tight text-white grid place-items-center fade ">
+        Hi, I'm Derek</h1>
+      <br />
+
+      <div class="invisible" id="swe">
+        <h2 class="m-auto font-semibold text-2xl tracking-tight text-white grid place-items-center fade ">
+          UWaterloo Software Engineering Student</h2>
+      </div>
+    </div>
+    <span
+      class="absolute bottom-0 gap-x-96 visible animate-bounce m-auto font-semibold text-4xl tracking-tight text-white grid place-items-center">
+      <p class="rotate-90 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500">>>>&nbsp;&nbsp;&nbsp;</p>
+    </span>
+  </div>
+
+  <div class="bg-zinc-800 flex-col mb-20">
+    <h2 id="title" class="pt-20 font-semibold text-4xl text-blue-600 flex justify-center reveal fade-right mb-20">
+      PORTFOLIO
+    </h2>
+    <ul id="cards">
+      <li class="card" id="card_1">
+        <div class="card__content bg-green-200 reveal fade-right">
+          <div>
+            <h2 class="font-semibold text-[4vw] reveal fade-right">UncoverPC</h2>
+            <p class="font-semibold text-[2vw] reveal fade-right">A web-based-application to help users to save money
+              with gaming desktops.</p>
+            <button class="reveal fade-right text-[1vw]">Explore</button>
+          </div>
+          <figure>
+            <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-1.jpg" alt="Image description">
+          </figure>
+        </div>
+      </li>
+      <li class="card" id="card_2">
+        <div class="card__content bg-green-300">
+          <div>
+            <h2 class="font-semibold text-[4vw] reveal fade-left">TraQR</h2>
+            <p class="font-semibold text-[2vw] reveal fade-left">A phone app that innovate how schools track their
+              equipment with QR codes.</p>
+            <button class="reveal fade-left text-[1vw]">Explore</button>
+          </div>
+          <figure>
+            <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg" alt="Image description">
+          </figure>
+        </div>
+      </li>
+      <li class="card" id="card_3">
+        <div class="card__content bg-green-400">
+          <div>
+            <h2 class="font-semibold text-[4vw] reveal fade-right">MarketMood</h2>
+            <p class="font-semibold text-[2vw] reveal fade-right">Web-based-application that enables traders to to get
+              an advantage with market senitiments.</p>
+            <button class="reveal fade-right text-[1vw]">Explore</button>
+          </div>
+          <figure>
+            <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-3.jpg" alt="Image description">
+          </figure>
+        </div>
+      </li>
+      <li class="card" id="card_4">
+        <div class="card__content bg-green-500">
+          <div>
+            <h2 class="font-semibold text-[4vw] reveal fade-left">StudyHack</h2>
+            <p class="font-semibold text-[2vw] reveal fade-left">Web-based-application + Chrome Exentsion that monitors
+              your browser usage to help you focus.</p>
+            <button class="reveal fade-left text-[1vw]">Explore</button>
+          </div>
+          <figure>
+            <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg" alt="Image description">
+          </figure>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="bg-yellow-400 flex-col">
+    <div class="flex justify-center reveal fade-bottom" id="works">
+      <div class="work" id="work_1">
+        <h2 id="title" class="pt-20 font-semibold text-4xl text-blue-600 flex justify-center reveal fade-right mb-20">
+          WORK EXPERIENCE
+        </h2>
+        <div
+          class="border-4 border-white rounded-lg hover:border-teal-400 hover: h-[60vh] w-[30vw] justify-center m-8">
+          <div class="work__content">
+            <div class="h-[60%]"><img src="../res/codeninaslogo.png"></div>
+            <div class="bottom-0 h-[40%] font-semibold bg-white">
+              <h3 class=" text-[1.5vw] tracking-tight text-zinc-800 ml-2">Code Ninjas - Coding Instructor</h3>
+              <br />
+              <h3 class=" text-[1vw] tracking-tight text-zinc-800 ml-2 mr-2">A short description about what your role at
+                code
+                ninjas was</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-4 border-white rounded-lg hover:border-teal-400 h-[60vh] w-[30vw] justify-center m-8 work"
+        id="work_2">
+        <div class="work__content">
+          <div class="h-[60%]"><img src="../res/Nokia-Logo.png"></div>
+          <div class="bottom-0 h-[40%] font-semibold bg-white">
+            <h3 class=" text-[1.5vw] tracking-tight text-zinc-800 ml-2">Nokia - Future Tech Intern</h3>
+            <br />
+            <h3 class=" text-[1vw] tracking-tight text-zinc-800 ml-2 mr-2">A short description about what your role at
+              Nokia
+              was</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-zinc-800 flex-col">
+    <div class="reveal fade-right">
+      <h2 class="pt-20 font-semibold text-4xl text-blue-800 flex justify-center">
+        EXTRA-CURRICULARS
+      </h2>
+    </div>
+  </div>
+
+  <div class="h-screen bg-zinc-800 flex-col">
+    <div class="reveal fade-right">
+      <h2 class="pt-20 font-semibold text-4xl text-blue-800 flex justify-center">
+        SKILLS
+      </h2>
+    </div>
+  </div>
+
+</body>
+
+<script>
+
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+
+      }
+    }
+  }
+
+  window.addEventListener("scroll", reveal);
+
+  function delay(time) {
+    return new Promise(resolve => setTimeout(resolve, time));
+  }
+
+  var swe = document.getElementById("swe");
+  delay(500).then(() => {
+    swe.classList.remove("invisible");
+    swe.classList.add("typewriter", "visible")
+  })
+</script>
+
+</html>

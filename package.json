@@ -1,0 +1,14 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Personal Website for Derek Li",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Derek Li",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
