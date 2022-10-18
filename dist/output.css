@@ -611,6 +611,10 @@ video {
   display: flex;
 }
 
+.inline-flex {
+  display: inline-flex;
+}
+
 .grid {
   display: grid;
 }
@@ -753,16 +757,6 @@ video {
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
 
-.bg-green-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
-}
-
-.bg-green-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(134 239 172 / var(--tw-bg-opacity));
-}
-
 .bg-green-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(74 222 128 / var(--tw-bg-opacity));
@@ -791,6 +785,30 @@ video {
   --tw-gradient-from: #6366f1;
   --tw-gradient-to: rgb(99 102 241 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-purple-200 {
+  --tw-gradient-from: #e9d5ff;
+  --tw-gradient-to: rgb(233 213 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-purple-500 {
+  --tw-gradient-to: rgb(168 85 247 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #a855f7, var(--tw-gradient-to);
+}
+
+.via-purple-800 {
+  --tw-gradient-to: rgb(107 33 168 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #6b21a8, var(--tw-gradient-to);
+}
+
+.to-pink-500 {
+  --tw-gradient-to: #ec4899;
+}
+
+.to-purple-500 {
+  --tw-gradient-to: #a855f7;
 }
 
 .bg-clip-text {
@@ -847,10 +865,6 @@ video {
 
 .text-\[4vw\] {
   font-size: 4vw;
-}
-
-.text-\[2vw\] {
-  font-size: 2vw;
 }
 
 .text-\[1\.5vw\] {
@@ -912,6 +926,15 @@ body::-webkit-scrollbar {
           animation: fadeIn 2s;
 }
 
+img.tech {
+  display: block;
+  max-width: 3.5vw;
+  max-height: 3.5vh;
+  width: auto;
+  height: auto;
+  margin-right: 4px;
+}
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -932,10 +955,15 @@ body::-webkit-scrollbar {
   }
 }
 
+/* Explore Button */
+
+.explore {
+}
+
 .typewriter {
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
-  border-right: .1em solid orange;
+  border-right: 0.1em solid orange;
   /* The typwriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
@@ -943,33 +971,29 @@ body::-webkit-scrollbar {
   /* Gives that scrolling effect as the typing happens */
   /* letter-spacing: .15em; */
   /* Adjust as needed */
-  -webkit-animation:
-    typing 2.5s steps(30, end),
-    blink-caret .5s step-end infinite;
-          animation:
-    typing 2.5s steps(30, end),
-    blink-caret .5s step-end infinite;
+  -webkit-animation: typing 2.5s steps(30, end), blink-caret 0.5s step-end infinite;
+          animation: typing 2.5s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
 /* The typing effect */
 
 @-webkit-keyframes typing {
   from {
-    width: 0
+    width: 0;
   }
 
   to {
-    width: 100%
+    width: 100%;
   }
 }
 
 @keyframes typing {
   from {
-    width: 0
+    width: 0;
   }
 
   to {
-    width: 100%
+    width: 100%;
   }
 }
 
@@ -978,22 +1002,22 @@ body::-webkit-scrollbar {
 @-webkit-keyframes blink-caret {
   from,
   to {
-    border-color: transparent
+    border-color: transparent;
   }
 
   50% {
-    border-color: white
+    border-color: white;
   }
 }
 
 @keyframes blink-caret {
   from,
   to {
-    border-color: transparent
+    border-color: transparent;
   }
 
   50% {
-    border-color: white
+    border-color: white;
   }
 }
 
@@ -1152,13 +1176,17 @@ body::-webkit-scrollbar {
 }
 
 #cards {
-  padding-bottom: calc(var(--numcards) * var(--card-top-offset));
+  padding-bottom: calc(
+    var(--numcards) * var(--card-top-offset)
+  );
   /* Make place at bottom, as items will slide to that position*/
-  margin-bottom: var(--card-margin);
+  margin-bottom: var(
+    --card-margin
+  );
   /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
 }
 
-#title{
+#title {
   position: -webkit-sticky;
   position: sticky;
 }
@@ -1245,13 +1273,17 @@ body::-webkit-scrollbar {
 }
 
 #works {
-  padding-bottom: calc(var(--numwork) * var(--work-top-offset));
+  padding-bottom: calc(
+    var(--numwork) * var(--work-top-offset)
+  );
   /* Make place at bottom, as items will slide to that position*/
-  margin-bottom: var(--work-margin);
+  margin-bottom: var(
+    --work-margin
+  );
   /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
 }
 
-#title{
+#title {
   position: -webkit-sticky;
   position: sticky;
 }
@@ -1315,4 +1347,3 @@ body::-webkit-scrollbar {
     align-items: center;
   }
 }
-
