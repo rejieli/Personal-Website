@@ -575,6 +575,10 @@ video {
   margin: auto;
 }
 
+.m-10 {
+  margin: 2.5rem;
+}
+
 .mr-6 {
   margin-right: 1.5rem;
 }
@@ -609,6 +613,18 @@ video {
 
 .mt-20 {
   margin-top: 5rem;
+}
+
+.ml-\[4vw\] {
+  margin-left: 4vw;
+}
+
+.mr-\[4vw\] {
+  margin-right: 4vw;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .block {
@@ -685,6 +701,10 @@ video {
           animation: bounce 1s infinite;
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -733,9 +753,64 @@ video {
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
-.bg-red-200 {
+.bg-red-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.bg-blue-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+}
+
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+
+.bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
+.bg-zinc-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(82 82 91 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(202 138 4 / var(--tw-bg-opacity));
+}
+
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-blue-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -822,12 +897,9 @@ video {
   font-size: 1vw;
 }
 
-.text-\[3vw\] {
-  font-size: 3vw;
-}
-
-.text-\[2vw\] {
-  font-size: 2vw;
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-semibold {
@@ -866,12 +938,47 @@ video {
   color: rgb(30 64 175 / var(--tw-text-opacity));
 }
 
+.text-green-800 {
+  --tw-text-opacity: 1;
+  color: rgb(22 101 52 / var(--tw-text-opacity));
+}
+
+.text-green-400 {
+  --tw-text-opacity: 1;
+  color: rgb(74 222 128 / var(--tw-text-opacity));
+}
+
+.text-red-800 {
+  --tw-text-opacity: 1;
+  color: rgb(153 27 27 / var(--tw-text-opacity));
+}
+
+.text-orange-600 {
+  --tw-text-opacity: 1;
+  color: rgb(234 88 12 / var(--tw-text-opacity));
+}
+
+.text-yellow-600 {
+  --tw-text-opacity: 1;
+  color: rgb(202 138 4 / var(--tw-text-opacity));
+}
+
+.text-yellow-300 {
+  --tw-text-opacity: 1;
+  color: rgb(253 224 71 / var(--tw-text-opacity));
+}
+
+.text-green-300 {
+  --tw-text-opacity: 1;
+  color: rgb(134 239 172 / var(--tw-text-opacity));
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 
 .fade {
@@ -881,20 +988,30 @@ body::-webkit-scrollbar {
 
 div.tech > img {
   display: block;
-  max-width: 6vw;
-  max-height: 6vh;
+  max-width: 4vw;
+  max-height: 4vw;
   width: auto;
   height: auto;
   margin-right: 4px;
 }
 
-#experience > div>img {
+#experience > div > img {
   display: block;
   max-width: 20vw;
-  max-height: 20vh;
+  max-height: 10vw;
   width: auto;
   height: auto;
   margin-left: 10vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.skillImg > img {
+  display: block;
+  max-width: 2vw;
+  max-height: 2vw;
+  width: auto;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -917,11 +1034,6 @@ div.tech > img {
   100% {
     opacity: 1;
   }
-}
-
-/* Explore Button */
-
-.explore {
 }
 
 .typewriter {
@@ -1081,6 +1193,30 @@ div.tech > img {
   }
 }
 
+/* Progress bar */
+
+.animated-progress {
+  width: inherit;
+  height: 18px;
+  border-radius: 25px;
+  margin: 20px 0px;
+  border: 1px solid rgb(80, 73, 73);
+  overflow: hidden;
+  position: relative;
+}
+
+.animated-progress span {
+  height: 100%;
+  display: block;
+  width: 0;
+  color: rgb(255, 251, 251);
+  line-height: 18px;
+  position: absolute;
+  text-align: end;
+  padding-right: 5px;
+  border-radius: 0 10px 10px 0;
+}
+
 /* Scrolling animation */
 
 #cards {
@@ -1133,7 +1269,7 @@ div.tech > img {
 
 :root {
   --card-height: 45vw;
-  --card-margin: 4vw;
+  --card-margin: 2vw;
   --card-top-offset: 1em;
   --numcards: 4;
   --outline-width: 0px;

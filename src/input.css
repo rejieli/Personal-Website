@@ -7,7 +7,7 @@ html {
 }
 
 body::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 
 .fade {
@@ -16,24 +16,31 @@ body::-webkit-scrollbar {
 
 div.tech > img {
   display: block;
-  max-width: 6vw;
-  max-height: 6vh;
+  max-width: 4vw;
+  max-height: 4vw;
   width: auto;
   height: auto;
   margin-right: 4px;
 }
 
-#experience > div>img {
+#experience > div > img {
   display: block;
   max-width: 20vw;
-  max-height: 20vh;
+  max-height: 10vw;
   width: auto;
   height: auto;
   margin-left: 10vw;
   object-fit: cover;
 }
 
-
+.skillImg > img {
+  display: block;
+  max-width: 2vw;
+  max-height: 2vw;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
 
 @keyframes fadeIn {
   0% {
@@ -44,12 +51,6 @@ div.tech > img {
     opacity: 1;
   }
 }
-
-/* Explore Button */
-
-.explore {
-}
-
 .typewriter {
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
@@ -136,6 +137,30 @@ div.tech > img {
   }
 }
 
+/* Progress bar */
+
+.animated-progress {
+  width: inherit;
+  height: 18px;
+  border-radius: 25px;
+  margin: 20px 0px;
+  border: 1px solid rgb(80, 73, 73);
+  overflow: hidden;
+  position: relative;
+}
+
+.animated-progress span {
+  height: 100%;
+  display: block;
+  width: 0;
+  color: rgb(255, 251, 251);
+  line-height: 18px;
+  position: absolute;
+  text-align: end;
+  padding-right: 5px;
+  border-radius: 0 10px 10px 0;
+}
+
 /* Scrolling animation */
 
 #cards {
@@ -191,7 +216,7 @@ div.tech > img {
 
 :root {
   --card-height: 45vw;
-  --card-margin: 4vw;
+  --card-margin: 2vw;
   --card-top-offset: 1em;
   --numcards: 4;
   --outline-width: 0px;
