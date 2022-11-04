@@ -1,672 +1,887 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="Icon" type="image/png" href="../res/Logo.png" />
+    <title>Derek Li</title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../dist/output.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="Icon" type="image/png" href="../res/Logo.png" />
-  <title>Derek Li</title>
-</head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<body class="bg-zinc-800">
-  <div class="h-screen flex place-items-center flex-col">
-    <nav class="flex items-center justify-between flex-wrap bg-zinc-800 p-6 fade">
-      <div class="flex items-center flex-shrink-0 text-white mr-6">
-        <span class="font-semibold text-xl tracking-tight">Derek Li</span>
-      </div>
-      <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div class="text-sm lg:flex-grow float-right">
-          <a href="#portfolio" class="block mt-4 lg:inline-block lg:mt-0 text-zinc-300 hover:text-white mr-4">
-            Portfolio
-          </a>
-          <a href="#experience" class="block mt-4 lg:inline-block lg:mt-0 text-zinc-300 hover:text-white mr-4">
-            Work-Experience
-          </a>
-          <a href="#extra-curriculars" class="block mt-4 lg:inline-block lg:mt-0 text-zinc-300 hover:text-white mr-4">
-            Extra-Curriculars
-          </a>
-          <a href="#skills" class="block mt-4 lg:inline-block lg:mt-0 text-zinc-300 hover:text-white">
-            Skills
-          </a>
+  <body class="bg-zinc-800">
+    <div class="h-screen flex place-items-center flex-col">
+      <nav
+        class="flex items-center justify-between flex-wrap bg-zinc-800 p-6 fade"
+      >
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <span class="font-semibold text-xl tracking-tight">Derek Li</span>
         </div>
-      </div>
-    </nav>
-    <div class="place-items-center m-auto">
-      <h1 class="m-auto font-semibold text-6xl tracking-tight text-white grid place-items-center fade">
-        Hi, I'm Derek
-      </h1>
-      <br />
-
-      <div class="invisible mb-8" id="swe">
-        <h2 class="m-auto font-semibold text-2xl tracking-tight text-white grid place-items-center fade">
-          UWaterloo Software Engineering Student
-        </h2>
-      </div>
-      <div class="justify-center flex fade">
-        <a style="font-size: 36px" class="mt-8 mr-8 m-8 text-white fa" href="https://github.com/rejieli">&#xf09b;</a>
-        <a style="font-size: 36px" class="mt-8 mr-8 text-white fa"
-          href="https://www.linkedin.com/in/derek-li2/">&#xf08c;</a>
-        <a style="font-size: 36px" class="mt-8 mr-8 text-white fa" href="mailto: derek@derekli.dev">&#xf0e0;</a>
-      </div>
-    </div>
-    <span
-      class="absolute bottom-0 gap-x-96 visible animate-bounce m-auto font-semibold text-4xl tracking-tight text-white grid place-items-center">
-      <button class="rotate-90 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500"
-        onclick="window.location.href='#portfolio'">
-        >>>&nbsp;&nbsp;&nbsp;
-      </button>
-    </span>
-  </div>
-
-  <div class="bg-zinc-800 flex-col mb-20" id="portfolio">
-    <h2 id="title" class="pt-20 font-semibold text-4xl text-blue-600 flex justify-center reveal fade-right mb-20">
-      PORTFOLIO
-    </h2>
-    <ul id="cards">
-      <li class="card" id="card_1">
-        <div class="card__content bg-zinc-800 bg-gradient-to-r from-stone-500  to-white">
-          <div>
-            <h2 class="font-semibold text-[4vw] reveal fade-right">
-              UncoverPC
-            </h2>
-            <div class="tech inline-flex reveal fade-right">
-              <img src="../res/spring.png" alt="Spring Boot Framework" />
-              <img src="../res/java.png" alt="Java" />
-              <img src="../res/jsoup.png" alt="Jsoup" />
-              <img src="../res/firebase.png" alt="Firebase" />
-              <img src="../res/html.png" alt="HTML" />
-              <img src="../res/css.png" alt="CSS" />
-              <img src="../res/js.png" alt="Javascript" />
-              <img src="../res/thymeleaf.png" alt="Thymeleaf" />
-            </div>
-            <p class="font-semibold text-[1.5vw] reveal fade-right">
-              A web-based-application to help users to save money with gaming
-              desktops.
-            </p>
-            <div class="readMore"><button class="reveal fade-right text-[1vw]" id="explore">Explore
-              </button>
-              <p><span class="text-[1vw]" id="more">Developed with an ambition to introduce consumers to the world of
-                  custom gaming computers, this application webscrapes prebuilt gaming desktops from top stores like
-                  BestBuy. The software then analyzes the components and searches the web for similar components to
-                  determine
-                  how much you can save by building your own computer. <br><a style="font-size: 36px"
-                    class="text-white fa" href="https://github.com/rejieli/UncoverPC">&#xf09b;</a></span></p>
-            </div>
-
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div class="text-sm lg:flex-grow float-right">
+            <a
+              href="#portfolio"
+              class="block mt-4 lg:inline-block lg:mt-0 text-zinc-300 hover:text-white mr-4"
+            >
+              Portfolio
+            </a>
+            <a
+              href="#experience"
+              class="block mt-4 lg:inline-block lg:mt-0 text-zinc-300 hover:text-white mr-4"
+            >
+              Work-Experience
+            </a>
+            <a
+              href="#extra-curriculars"
+              class="block mt-4 lg:inline-block lg:mt-0 text-zinc-300 hover:text-white mr-4"
+            >
+              Extra-Curriculars
+            </a>
+            <a
+              href="#skills"
+              class="block mt-4 lg:inline-block lg:mt-0 text-zinc-300 hover:text-white"
+            >
+              Skills
+            </a>
           </div>
-          <figure>
-            <img src="../res/uncoverpc.png" alt="Image description" />
-          </figure>
         </div>
-      </li>
-      <li class="card" id="card_2">
-        <div class="card__content bg-gradient-to-r from-purple-200 via-purple-800 to-purple-500">
-          <div>
-            <h2 class="font-semibold text-[4vw] reveal fade-left">TraQR</h2>
-            <div class="tech inline-flex reveal fade-left">
-              <img src="../res/andriodstudio.png" alt="Andriod Studio" />
-              <img src="../res/java.png" alt="Java" />
-              <img src="../res/xml.png" alt="Java" />
-              <img src="../res/firebase.png" alt="Firebase" />
-              <img src="../res/adobexd.png" alt="Adobe XD" />
-            </div>
-            <p id="traqr" class="font-semibold text-[1.5vw] reveal fade-left">
-              A phone app that innovate how schools track their equipment with
-              QR codes.
-            </p>
-            <div class="readMore"><button class="reveal fade-right text-[1vw]" id="explore">Explore
-              </button>
-              <p><span class="text-[1vw]" id="more">Developed by the <a class="text-blue-600 hover:underline" href="#tsc">Tech Startup Club</a> that I cofounded, I supervised
-                  the
-                  development of TraQR with nine developers and nine other administrative members. This software was
-                  designed to digitialize how school track their equipment using QR codes (i.e where/who has the
-                  equipment, when does it need to be replaced), so teachers could have an easier time organizing their
-                  material. <br><a style="font-size: 36px" class="text-white fa"
-                    href="https://github.com/rejieli/UncoverPC">&#xf09b;</a></span></p>
-            </div>
-          </div>
-          <figure>
-            <img src="../res/traqr.png" alt="Image description" />
-          </figure>
-        </div>
-      </li>
-      <li class="card" id="card_3">
-        <div class="card__content bg-gradient-to-r from-red-400 via-white via-blue-400 via-green-400 to-orange-500">
-          <div>
-            <h2 class="font-semibold text-[4vw] reveal fade-right">
-              MarketMood
-            </h2>
-            <div class="tech inline-flex reveal fade-right">
-              <img src="../res/python.png" alt="Python" />
-              <img src="../res/flask.png" alt="Fask Server" />
-              <img src="../res/mongodb.png" alt="MongoDB" />
-              <img src="../res/html.png" alt="HTML" />
-              <img src="../res/css.png" alt="CSS" />
-              <img src="../res/js.png" alt="JS" />
-              <img src="../res/figma.png" alt="Figma" />
-            </div>
-            <p class="font-semibold text-[1.5vw] reveal fade-right">
-              Web-based-application that enables traders to to get an
-              advantage with instant market senitiments.
-            </p>
-            <div class="readMore"><button class="reveal fade-right text-[1vw]" id="explore">Explore
-              </button>
-              <p><span class="text-[1vw]" id="more">MarketMood was designed by a team of four as part of our
-                  HackTheNorth
-                  2022 project. It scrapes the most recent news articles every 5 minutes from publicly traded
-                  companies, and uses Natural Language Processing to analyze the sentiment of a company at that given
-                  time. <br><a style="font-size: 36px" class="text-white fa"
-                    href="https://github.com/rejieli/UncoverPC">&#xf09b;</a></span></p>
-            </div>
-          </div>
-          <figure>
-            <img src="../res/MarketMood.png" alt="Image description" />
-          </figure>
-        </div>
-      </li>
-      <li class="card" id="card_4">
-        <div class="card__content bg-gradient-to-r from-orange-500 via-white to-blue-500">
-          <div>
-            <h2 class="font-semibold text-[4vw] reveal fade-left">
-              StudyHack
-            </h2>
-            <div class="tech inline-flex reveal fade-left">
-              <img src="../res/spring.png" alt="Python" />
-              <img src="../res/java.png" alt="Fask Server" />
-              <img src="../res/firebase.png" alt="MongoDB" />
-              <img src="../res/html.png" alt="HTML" />
-              <img src="../res/css.png" alt="CSS" />
-              <img src="../res/js.png" alt="JS" />
-              <img src="../res/json.png" alt="Figma" />
-            </div>
-            <p class="font-semibold text-[1.5vw] reveal fade-left">
-              Web-based-application + Chrome Exentsion that monitors your
-              browser usage to help you focus.
-            </p>
-            <div class="readMore"><button class="reveal fade-right text-[1vw]" id="explore">Explore
-              </button>
-              <p><span class="text-[1vw]" id="more">Being one of my first ever projects, StudyHack was designed to keep
-                  users focused on their work. StudyHack's chrome extension tracks their most used sites, and breaks
-                  down browsing history to allow users to assess theirductivity. <br> <a style="font-size: 36px"
-                    class="text-white fa" href="https://github.com/rejieli/UncoverPC">&#xf09b;</a></span></p>
-            </div>
-          </div>
-          <figure>
-            <img src="../res/Studyhack.png" alt="Image description" />
-          </figure>
-        </div>
-      </li>
-      <li class="card" id="card_5">
-        <div class="card__content bg-gradient-to-r from-red-700 via-blue-900 to-blue-500">
-          <div>
-            <h2 class="font-semibold text-[4vw] reveal fade-right">
-              Project One
-            </h2>
-            <div class="tech inline-flex reveal fade-right">
-              <img src="../res/spring.png" alt="Spring Boot Framework" />
-              <img src="../res/java.png" alt="Java" />
-              <img src="../res/Python.png" alt="Python" />
-              <img src="../res/mongodb.png" alt="MongoDB" />
-              <img src="../res/html.png" alt="HTML" />
-              <img src="../res/css.png" alt="CSS" />
-              <img src="../res/tailwind.png" alt="Javascript" />
-              <img src="../res/js.png" alt="Javascript" />
-              <img src="../res/thymeleaf.png" alt="Thymeleaf" />
-            </div>
-            <p class="font-semibold text-[1.5vw] reveal fade-right">
-              An AI-orientated web-based application that assists users in selecting the perfect technology related
-              product
-            </p>
-            <div class="readMore"><button class="reveal fade-right text-[1vw]" id="explore">Explore
-              </button>
-              <p><span class="text-[1vw]" id="more">Project One (which has not yet been given an official name) is the current
-                  project. In cooperation with a team of seven individuals that I organized, the software will
-                  utilize Natural Language Processing Neural Networks to analyze tech products from the web. It will
-                  then use another deep learning algorithm to give users the most suitable recommendation based on their
-                  requirements.</span></p>
-            </div>
-          </div>
-          <figure>
-            <img src="../res/Project One.png" alt="Image description" />
-          </figure>
-        </div>
-      </li>
-      <li class="card" id="card_6">
-        <div class="card__content bg-gradient-to-r from-red-300 via-cyan-400 to-orange-600">
-          <div>
-            <h2 class="font-semibold text-[4vw] reveal fade-left">
-              Personal Website
-            </h2>
-            <div class="tech inline-flex reveal fade-left">
-              <img src="../res/tailwind.png" alt="tailwind" />
-              <img src="../res/html.png" alt="HTML" />
-              <img src="../res/css.png" alt="CSS" />
-              <img src="../res/js.png" alt="Javascript" />
-            </div>
-            <p class="font-semibold text-[1.5vw] reveal fade-left">
-              A website to demonstrate my skills and abilities (the website you're currently on)
-            </p>
-            <div class="readMore"><button class="reveal fade-right text-[1vw]" id="explore">Explore
-              </button>
-              <p><span class="text-1xl" id="more"><br><a style="font-size: 36px" class="text-white fa"
-                    href="https://github.com/rejieli/UncoverPC">&#xf09b;</a></span></p>
-            </div>
-          </div>
-          <figure>
-            <img src="../res/Logo.png" alt="Image description" />
-          </figure>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div class="bg-zine-500 flex-col rounded-lg" id="experience">
-    <h2 id="title"
-      class="reveal fade-bottom pt-20 font-semibold text-4xl text-green-300 flex justify-center reveal fade-right mb-10">
-      WORK EXPERIENCE
-    </h2>
-    <div class="flex">
-      <div class="text-white w-1/2 flex-col">
-        <h1 class="reveal fade-bottom font-semibold text-6xl ml-[8vw]">
-          Nokia
+      </nav>
+      <div class="place-items-center m-auto">
+        <h1
+          class="m-auto font-semibold text-6xl tracking-tight text-white grid place-items-center fade"
+        >
+          Hi, I'm Derek
         </h1>
-        <h2 class="reveal fade-bottom text-4xl ml-[8vw] italic">
-          Future Tech Intern <br>
-          <h3 class="reveal fade-bottom text-3xl ml-[8vw] italic">(Jul 2021 - Aug 2021)</h3>
-        </h2>
-        <div class="tech inline-flex ml-[8vw] mt-8 reveal fade-bottom">
-          <img src="../res/spring.png" alt="Spring Boot Framework" /><img src="../res/java.png" alt="Java" /><img
-            src="../res/react.png" alt="React" /><img src="../res/js.png" alt="Javascript" /><img src="../res/html.png"
-            alt="HTML" /><img src="../res/css.png" alt="CSS" />
-        </div>
-        <div class="reveal fade-bottom text-1xl ml-[8vw] mt-5">
-          <li>
-            Developed front end web pages for the
-            <a class="text-blue-600 hover:underline"
-              href="https://www.nokia.com/networks/products/network-services-platform/#:~:text=NSP%20is%20a%20comprehensive%20platform,easier%20for%20your%20operations%20team.">Network
-              Service Platform</a>
-            to automate and control IP and optical networks using React JS
-          </li>
-          <li>
-            Developed a backend engine to receive and process the front end
-            data using Spring Boot Framework
-          </li>
-        </div>
-      </div>
-      <img class="reveal fade-bottom" src="../res/Nokia-Logo.png" alt="Nokia" />
-    </div>
-    <div class="flex mt-20">
-      <div class="text-white w-1/2 flex-col">
-        <h1 class="reveal fade-bottom font-semibold text-6xl ml-[8vw]">
-          Code Ninjas
-        </h1>
-        <h2 class="reveal fade-bottom text-4xl ml-[8vw] italic">
-          Coding Instructor <br>
-          <h3 class="reveal fade-bottom text-3xl ml-[8vw] italic">(Jul 2020 - Jan 2022)</h3>
-        </h2>
-        <div class="tech inline-flex ml-[8vw] mt-8 reveal fade-bottom">
-          <img src="../res/python.png" alt="Python" /><img src="../res/java.png" alt="Java" /><img
-            src="../res/unity.png" alt="Unity" /><img src="../res/scratch.png" alt="Scratch" /><img src="../res/js.png"
-            alt="Javascript" /><img src="../res/html.png" alt="HTML" /><img src="../res/css.png" alt="CSS" />
-        </div>
-        <div class="reveal fade-bottom text-1xl ml-[8vw] mt-5">
-          <li>
-            Taught 100+ 5 to 14 year-old students to code games and develop
-            algorithms using Scratch, Javascript & Python by creating a
-            welcoming environment and quickly accommodating to their
-            individual skill level and learning style
-          </li>
-          <li>
-            elivered exceptional customer service in virtual and in person environments
-          </li>
-        </div>
-      </div>
-      <img class="reveal fade-bottom" src="../res/codeninaslogo.png" alt="Code Ninjas" />
-    </div>
-  </div>
+        <br />
 
-  <div class="flex-col mt-4" id="extra-curriculars">
-    <div class="reveal fade-right">
-      <h2 class="pt-20 font-semibold text-4xl text-orange-600 flex justify-center mb-10">
-        EXTRA-CURRICULARS
+        <div class="invisible mb-8" id="swe">
+          <h2
+            class="m-auto font-semibold text-2xl tracking-tight text-white grid place-items-center fade"
+          >
+            UWaterloo Software Engineering Student
+          </h2>
+        </div>
+        <div class="justify-center flex fade">
+          <a
+            style="font-size: 36px"
+            class="mt-8 mr-8 m-8 text-white fa"
+            href="https://github.com/rejieli"
+            >&#xf09b;</a
+          >
+          <a
+            style="font-size: 36px"
+            class="mt-8 mr-8 text-white fa"
+            href="https://www.linkedin.com/in/derek-li2/"
+            >&#xf08c;</a
+          >
+          <a
+            style="font-size: 36px"
+            class="mt-8 mr-8 text-white fa"
+            href="mailto: derek@derekli.dev"
+            >&#xf0e0;</a
+          >
+        </div>
+      </div>
+      <span
+        class="absolute bottom-0 gap-x-96 visible animate-bounce m-auto font-semibold text-4xl tracking-tight text-white grid place-items-center"
+      >
+        <button
+          class="rotate-90 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500"
+          onclick="window.location.href='#portfolio'"
+        >
+          >>>&nbsp;&nbsp;&nbsp;
+        </button>
+      </span>
+    </div>
+
+    <div class="bg-zinc-800 flex-col mb-20" id="portfolio">
+      <h2
+        id="title"
+        class="pt-20 font-semibold text-4xl text-blue-600 flex justify-center reveal fade-right mb-20"
+      >
+        PORTFOLIO
+      </h2>
+      <ul id="cards">
+        <li class="card" id="card_1">
+          <div
+            class="card__content bg-zinc-800 bg-gradient-to-r from-stone-500 to-white"
+          >
+            <div>
+              <h2 class="font-semibold text-[4vw] reveal fade-right">
+                UncoverPC
+              </h2>
+              <div class="tech inline-flex reveal fade-right">
+                <img src="../res/spring.png" alt="Spring Boot Framework" />
+                <img src="../res/java.png" alt="Java" />
+                <img src="../res/jsoup.png" alt="Jsoup" />
+                <img src="../res/firebase.png" alt="Firebase" />
+                <img src="../res/html.png" alt="HTML" />
+                <img src="../res/css.png" alt="CSS" />
+                <img src="../res/js.png" alt="Javascript" />
+                <img src="../res/thymeleaf.png" alt="Thymeleaf" />
+              </div>
+              <p class="font-semibold text-[1.5vw] reveal fade-right">
+                A web-based-application to help users to save money with gaming
+                desktops.
+              </p>
+              <div class="readMore">
+                <button class="reveal fade-right text-[1vw]" id="explore">
+                  Explore
+                </button>
+                <p>
+                  <span class="text-[1vw]" id="more"
+                    >Developed with an ambition to introduce consumers to the
+                    world of custom gaming computers, this application
+                    webscrapes prebuilt gaming desktops from top stores like
+                    BestBuy. The software then analyzes the components and
+                    searches the web for similar components to determine how
+                    much you can save by building your own computer. <br /><a
+                      style="font-size: 36px"
+                      class="text-white fa"
+                      href="https://github.com/rejieli/UncoverPC"
+                      >&#xf09b;</a
+                    ></span
+                  >
+                </p>
+              </div>
+            </div>
+            <figure>
+              <img src="../res/uncoverpc.png" alt="Image description" />
+            </figure>
+          </div>
+        </li>
+        <li class="card" id="card_2">
+          <div
+            class="card__content bg-gradient-to-r from-purple-200 via-purple-800 to-purple-500"
+          >
+            <div>
+              <h2 class="font-semibold text-[4vw] reveal fade-left">TraQR</h2>
+              <div class="tech inline-flex reveal fade-left">
+                <img src="../res/andriodstudio.png" alt="Andriod Studio" />
+                <img src="../res/java.png" alt="Java" />
+                <img src="../res/xml.png" alt="Java" />
+                <img src="../res/firebase.png" alt="Firebase" />
+                <img src="../res/adobexd.png" alt="Adobe XD" />
+              </div>
+              <p id="traqr" class="font-semibold text-[1.5vw] reveal fade-left">
+                A phone app that innovate how schools track their equipment with
+                QR codes.
+              </p>
+              <div class="readMore">
+                <button class="reveal fade-left text-[1vw]" id="explore">
+                  Explore
+                </button>
+                <p>
+                  <span class="text-[1vw]" id="more"
+                    >Developed by the
+                    <a class="text-blue-600 hover:underline" href="#tsc"
+                      >Tech Startup Club</a
+                    >
+                    that I cofounded, I supervised the development of TraQR with
+                    nine developers and nine other administrative members. This
+                    software was designed to digitialize how school track their
+                    equipment using QR codes (i.e where/who has the equipment,
+                    when does it need to be replaced), so teachers could have an
+                    easier time organizing their material. <br /><a
+                      style="font-size: 36px"
+                      class="text-white fa"
+                      href="https://github.com/rejieli/TraQR"
+                      >&#xf09b;</a
+                    ></span
+                  >
+                </p>
+              </div>
+            </div>
+            <figure>
+              <img src="../res/traqr.png" alt="Image description" />
+            </figure>
+          </div>
+        </li>
+        <li class="card" id="card_3">
+          <div
+            class="card__content bg-gradient-to-r from-red-400 via-white via-blue-400 via-green-400 to-orange-500"
+          >
+            <div>
+              <h2 class="font-semibold text-[4vw] reveal fade-right">
+                MarketMood
+              </h2>
+              <div class="tech inline-flex reveal fade-right">
+                <img src="../res/python.png" alt="Python" />
+                <img src="../res/flask.png" alt="Fask Server" />
+                <img src="../res/mongodb.png" alt="MongoDB" />
+                <img src="../res/html.png" alt="HTML" />
+                <img src="../res/css.png" alt="CSS" />
+                <img src="../res/js.png" alt="JS" />
+                <img src="../res/figma.png" alt="Figma" />
+              </div>
+              <p class="font-semibold text-[1.5vw] reveal fade-right">
+                Web-based-application that enables traders to to get an
+                advantage with instant market senitiments.
+              </p>
+              <div class="readMore">
+                <button class="reveal fade-right text-[1vw]" id="explore">
+                  Explore
+                </button>
+                <p>
+                  <span class="text-[1vw]" id="more"
+                    >MarketMood was designed by a team of four as part of our
+                    HackTheNorth 2022 project. It scrapes the most recent news
+                    articles every 5 minutes from publicly traded companies, and
+                    uses Natural Language Processing to analyze the sentiment of
+                    a company at that given time. <br /><a
+                      style="font-size: 36px"
+                      class="text-white fa"
+                      href="https://github.com/orgs/MarketMood-htn/repositories"
+                      >&#xf09b;</a
+                    ></span
+                  >
+                </p>
+              </div>
+            </div>
+            <figure>
+              <img src="../res/MarketMood.png" alt="Image description" />
+            </figure>
+          </div>
+        </li>
+        <li class="card" id="card_4">
+          <div
+            class="card__content bg-gradient-to-r from-orange-500 via-white to-blue-500"
+          >
+            <div>
+              <h2 class="font-semibold text-[4vw] reveal fade-left">
+                StudyHack
+              </h2>
+              <div class="tech inline-flex reveal fade-left">
+                <img src="../res/spring.png" alt="Spring" />
+                <img src="../res/java.png" alt="Java" />
+                <img src="../res/firebase.png" alt="Firebase" />
+                <img src="../res/html.png" alt="HTML" />
+                <img src="../res/css.png" alt="CSS" />
+                <img src="../res/js.png" alt="JS" />
+                <img src="../res/json.png" alt="JSON" />
+              </div>
+              <p class="font-semibold text-[1.5vw] reveal fade-left">
+                Web-based-application + Chrome Exentsion that monitors your
+                browser usage to help you focus.
+              </p>
+              <div class="readMore">
+                <button class="reveal fade-left text-[1vw]" id="explore">
+                  Explore
+                </button>
+                <p>
+                  <span class="text-[1vw]" id="more"
+                    >Being one of my first ever projects, StudyHack was designed
+                    to keep users focused on their work. StudyHack's chrome
+                    extension tracks their most used sites, and breaks down
+                    browsing history to allow users to assess their
+                    productivity.
+                    <br />
+                    <a
+                      style="font-size: 36px"
+                      class="text-white fa"
+                      href="https://github.com/orgs/studyhack-1/repositories"
+                      >&#xf09b;</a
+                    ></span
+                  >
+                </p>
+              </div>
+            </div>
+            <figure>
+              <img src="../res/Studyhack.png" alt="Image description" />
+            </figure>
+          </div>
+        </li>
+        <li class="card" id="card_5">
+          <div
+            class="card__content bg-gradient-to-r from-red-700 via-blue-900 to-blue-500"
+          >
+            <div>
+              <h2 class="font-semibold text-[4vw] reveal fade-right">
+                Project One
+              </h2>
+              <div class="tech inline-flex reveal fade-right">
+                <img src="../res/spring.png" alt="Spring Boot Framework" />
+                <img src="../res/java.png" alt="Java" />
+                <img src="../res/python.png" alt="Python" />
+                <img src="../res/mongodb.png" alt="MongoDB" />
+                <img src="../res/html.png" alt="HTML" />
+                <img src="../res/css.png" alt="CSS" />
+                <img src="../res/tailwind.png" alt="Javascript" />
+                <img src="../res/js.png" alt="Javascript" />
+                <img src="../res/thymeleaf.png" alt="Thymeleaf" />
+              </div>
+              <p class="font-semibold text-[1.5vw] reveal fade-right">
+                An AI-orientated web-based application that assists users in
+                selecting the perfect technology related product
+              </p>
+              <div class="readMore">
+                <button class="reveal fade-right text-[1vw]" id="explore">
+                  Explore
+                </button>
+                <p>
+                  <span class="text-[1vw]" id="more"
+                    >Project One (which has not yet been given an official name)
+                    is the current project. In cooperation with a team of seven
+                    individuals that I organized, the software will utilize
+                    Natural Language Processing Neural Networks to analyze tech
+                    products from the web. It will then use another deep
+                    learning algorithm to give users the most suitable
+                    recommendation based on their requirements. <br />Github is
+                    private due to confidentiality reasons</span
+                  >
+                </p>
+              </div>
+            </div>
+            <figure>
+              <img src="../res/Project One.png" alt="Image description" />
+            </figure>
+          </div>
+        </li>
+        <li class="card" id="card_6">
+          <div
+            class="card__content bg-gradient-to-r from-red-300 via-cyan-400 to-orange-600"
+          >
+            <div>
+              <h2 class="font-semibold text-[4vw] reveal fade-left">
+                Personal Website
+              </h2>
+              <div class="tech inline-flex reveal fade-left">
+                <img src="../res/tailwind.png" alt="tailwind" />
+                <img src="../res/html.png" alt="HTML" />
+                <img src="../res/css.png" alt="CSS" />
+                <img src="../res/js.png" alt="Javascript" />
+              </div>
+              <p class="font-semibold text-[1.5vw] reveal fade-left">
+                A website to demonstrate my skills and abilities (the website
+                you're currently on)
+              </p>
+              <div class="readMore">
+                <button class="reveal fade-left text-[1vw]" id="explore">
+                  Explore
+                </button>
+                <p>
+                  <span class="text-1xl" id="more"
+                    ><br /><a
+                      style="font-size: 36px"
+                      class="text-white fa"
+                      href="https://github.com/rejieli/Personal-Website"
+                      >&#xf09b;</a
+                    ></span
+                  >
+                </p>
+              </div>
+            </div>
+            <figure>
+              <img src="../res/Logo.png" alt="Image description" />
+            </figure>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="bg-zine-500 flex-col rounded-lg" id="experience">
+      <h2
+        id="title"
+        class="reveal fade-bottom pt-20 font-semibold text-4xl text-green-300 flex justify-center reveal fade-right mb-10"
+      >
+        WORK EXPERIENCE
       </h2>
       <div class="flex">
-        <div id="tsc"class="text-white w-1/2 flex-col">
+        <div class="text-white w-1/2 flex-col">
           <h1 class="reveal fade-bottom font-semibold text-6xl ml-[8vw]">
-            Tech Startup Club
+            Nokia
           </h1>
           <h2 class="reveal fade-bottom text-4xl ml-[8vw] italic">
-            Software Team Lead &nbsp;&nbsp;(Sept 2021 - Jun 2022)
+            Future Tech Intern <br />
+            <h3 class="reveal fade-bottom text-3xl ml-[8vw] italic">
+              (Jul 2021 - Aug 2021)
+            </h3>
           </h2>
+          <div class="tech inline-flex ml-[8vw] mt-8 reveal fade-bottom">
+            <img src="../res/spring.png" alt="Spring Boot Framework" /><img
+              src="../res/java.png"
+              alt="Java"
+            /><img src="../res/react.png" alt="React" /><img
+              src="../res/js.png"
+              alt="Javascript"
+            /><img src="../res/html.png" alt="HTML" /><img
+              src="../res/css.png"
+              alt="CSS"
+            />
+          </div>
           <div class="reveal fade-bottom text-1xl ml-[8vw] mt-5">
-            <li>Led a team of nine software developers to develop  <a class="text-blue-600 hover:underline" href="#traqr">TraQR</a></li>
             <li>
-              Organized and hosted meeting to teach members how to code with different languages and frameworks from all experiences
+              Developed front end web pages for the
+              <a
+                class="text-blue-600 hover:underline"
+                href="https://www.nokia.com/networks/products/network-services-platform/#:~:text=NSP%20is%20a%20comprehensive%20platform,easier%20for%20your%20operations%20team."
+                >Network Service Platform</a
+              >
+              to automate and control IP and optical networks using React JS
+            </li>
+            <li>
+              Developed a backend engine to receive and process the front end
+              data using Spring Boot Framework
             </li>
           </div>
         </div>
+        <img
+          class="reveal fade-bottom"
+          src="../res/Nokia-Logo.png"
+          alt="Nokia"
+        />
       </div>
       <div class="flex mt-20">
         <div class="text-white w-1/2 flex-col">
           <h1 class="reveal fade-bottom font-semibold text-6xl ml-[8vw]">
-            TEAM 7476 - FIRST Robotics
+            Code Ninjas
           </h1>
           <h2 class="reveal fade-bottom text-4xl ml-[8vw] italic">
-            Software Team Lead &nbsp;&nbsp;(Sept 2020 - May 2022)
+            Coding Instructor <br />
+            <h3 class="reveal fade-bottom text-3xl ml-[8vw] italic">
+              (Jul 2020 - Jan 2022)
+            </h3>
           </h2>
+          <div class="tech inline-flex ml-[8vw] mt-8 reveal fade-bottom">
+            <img src="../res/python.png" alt="Python" /><img
+              src="../res/java.png"
+              alt="Java"
+            /><img src="../res/unity.png" alt="Unity" /><img
+              src="../res/scratch.png"
+              alt="Scratch"
+            /><img src="../res/js.png" alt="Javascript" /><img
+              src="../res/html.png"
+              alt="HTML"
+            /><img src="../res/css.png" alt="CSS" />
+          </div>
           <div class="reveal fade-bottom text-1xl ml-[8vw] mt-5">
             <li>
-              Trained team members to code using Java and
-              <a class="text-blue-600 hover:underline" href="https://docs.wpilib.org/en/stable/index.html">wpilib</a>
-              library to write software that controls the movement, vision,
-              and overall functionality of TEAM7476’s robot to compete in the
-              First Robotics Competition 2022 RAPID REACT
+              Taught 100+ 5 to 14 year-old students to code games and develop
+              algorithms using Scratch, Javascript & Python by creating a
+              welcoming environment and quickly accommodating to their
+              individual skill level and learning style
             </li>
             <li>
-              Organized outreach events alongside five executive members in
-              various communities to inspire youth into STEM
+              elivered exceptional customer service in virtual and in person
+              environments
             </li>
           </div>
         </div>
+        <img
+          class="reveal fade-bottom"
+          src="../res/codeninaslogo.png"
+          alt="Code Ninjas"
+        />
       </div>
-      <div class="flex mt-20">
-        <div class="text-white w-1/2 flex-col">
-          <h1 class="reveal fade-bottom font-semibold text-6xl ml-[8vw]">
-            Student Council
-          </h1>
-          <h2 class="reveal fade-bottom text-4xl ml-[8vw] italic">
-            Co-President &nbsp;&nbsp;(Sept 2020 - May 2022)
-          </h2>
-          <div class="reveal fade-bottom text-1xl ml-[8vw] mt-5">
-            <li>
-              Led 19 student council members to organize & host school-wide
-              events (2000 students) & mental health support, spearheading
-              event logistics and task delegation based on members’ strengths
-              and interests to optimize team morale
-            </li>
-            <li>
-              Liaised with student body, teacher advisors and school
-              administration address concerns and facilitate feedback
-              channels; introduced school board’s anonymous reporting tool to
-              cultivate an inclusive environment
-            </li>
+    </div>
+
+    <div class="flex-col mt-4" id="extra-curriculars">
+      <div class="reveal fade-right">
+        <h2
+          class="pt-20 font-semibold text-4xl text-orange-600 flex justify-center mb-10"
+        >
+          EXTRA-CURRICULARS
+        </h2>
+        <div class="flex">
+          <div id="tsc" class="text-white w-1/2 flex-col">
+            <h1 class="reveal fade-bottom font-semibold text-6xl ml-[8vw]">
+              Tech Startup Club
+            </h1>
+            <h2 class="reveal fade-bottom text-4xl ml-[8vw] italic">
+              Software Team Lead &nbsp;&nbsp;(Sept 2021 - Jun 2022)
+            </h2>
+            <div class="reveal fade-bottom text-1xl ml-[8vw] mt-5">
+              <li>
+                Led a team of nine software developers to develop
+                <a class="text-blue-600 hover:underline" href="#traqr">TraQR</a>
+              </li>
+              <li>
+                Organized and hosted meeting to teach members how to code with
+                different languages and frameworks from all experiences
+              </li>
+            </div>
+          </div>
+        </div>
+        <div class="flex mt-20">
+          <div class="text-white w-1/2 flex-col">
+            <h1 class="reveal fade-bottom font-semibold text-6xl ml-[8vw]">
+              TEAM 7476 - FIRST Robotics
+            </h1>
+            <h2 class="reveal fade-bottom text-4xl ml-[8vw] italic">
+              Software Team Lead &nbsp;&nbsp;(Sept 2020 - May 2022)
+            </h2>
+            <div class="reveal fade-bottom text-1xl ml-[8vw] mt-5">
+              <li>
+                Trained team members to code using Java and
+                <a
+                  class="text-blue-600 hover:underline"
+                  href="https://docs.wpilib.org/en/stable/index.html"
+                  >wpilib</a
+                >
+                library to write software that controls the movement, vision,
+                and overall functionality of TEAM7476’s robot to compete in the
+                First Robotics Competition 2022 RAPID REACT
+              </li>
+              <li>
+                Organized outreach events alongside five executive members in
+                various communities to inspire youth into STEM
+              </li>
+            </div>
+          </div>
+        </div>
+        <div class="flex mt-20">
+          <div class="text-white w-1/2 flex-col">
+            <h1 class="reveal fade-bottom font-semibold text-6xl ml-[8vw]">
+              Student Council
+            </h1>
+            <h2 class="reveal fade-bottom text-4xl ml-[8vw] italic">
+              Co-President &nbsp;&nbsp;(Sept 2020 - May 2022)
+            </h2>
+            <div class="reveal fade-bottom text-1xl ml-[8vw] mt-5">
+              <li>
+                Led 19 student council members to organize & host school-wide
+                events (2000 students) & mental health support, spearheading
+                event logistics and task delegation based on members’ strengths
+                and interests to optimize team morale
+              </li>
+              <li>
+                Liaised with student body, teacher advisors and school
+                administration address concerns and facilitate feedback
+                channels; introduced school board’s anonymous reporting tool to
+                cultivate an inclusive environment
+              </li>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="bg-zinc-800 flex-col" id="skills">
-    <div class="reveal fade-right">
-      <h2 class="pt-20 font-semibold text-4xl text-green-400 flex justify-center">
-        SKILLS
-      </h2>
+    <div class="bg-zinc-800 flex-col" id="skills">
+      <div class="reveal fade-right">
+        <h2
+          class="pt-20 font-semibold text-4xl text-green-400 flex justify-center"
+        >
+          SKILLS
+        </h2>
+      </div>
+      <div class="grid grid-cols-3">
+        <div class="font-semibold ml-[4vw] mr-[4vw]">
+          <div>
+            <h2
+              class="text-white font-semibold text-[2vw] flex justify-center mt-10"
+            >
+              Programming Languages
+            </h2>
+          </div>
+          <div class="">
+            <h3
+              class="pt-10 font-semibold text-1xl text-white flex justify-center"
+            >
+              Java
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-red-500" data-progress="90"></span>
+            </div>
+          </div>
+          <div class="">
+            <h3
+              class="pt-20 font-semibold text-1xl text-white flex justify-center"
+            >
+              Python
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-blue-600" data-progress="75"></span>
+            </div>
+          </div>
+          <div class="">
+            <h3
+              class="pt-20 font-semibold text-1xl text-white flex justify-center"
+            >
+              C
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-blue-400" data-progress="50"></span>
+            </div>
+          </div>
+          <div class="">
+            <h3
+              class="pt-20 font-semibold text-1xl text-white flex justify-center"
+            >
+              C++
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-blue-400" data-progress="30"></span>
+            </div>
+          </div>
+          <div class="">
+            <h3
+              class="pt-20 font-semibold text-1xl text-white flex justify-center"
+            >
+              Javascript
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-yellow-500" data-progress="80"></span>
+            </div>
+          </div>
+          <div class="">
+            <h3
+              class="pt-20 font-semibold text-1xl text-white flex justify-center"
+            >
+              Web-Dev (HTML/CSS)
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-red-400" data-progress="75"></span>
+            </div>
+          </div>
+        </div>
+        <div class="font-semibold ml-[4vw] mr-[4vw]">
+          <div class="">
+            <h2
+              class="text-white font-semibold text-[2vw] flex justify-center mt-10"
+            >
+              Frameworks /Libraries
+            </h2>
+          </div>
+          <div class="">
+            <h3
+              class="pt-10 font-semibold text-1xl text-white flex justify-center"
+            >
+              SpringBoot Framework
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-green-600" data-progress="85"></span>
+            </div>
+          </div>
+          <div class="">
+            <h3
+              class="pt-20 font-semibold text-1xl text-white flex justify-center"
+            >
+              Flask
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-zinc-600" data-progress="65"></span>
+            </div>
+          </div>
+          <div class="">
+            <h3
+              class="pt-20 font-semibold text-1xl text-white flex justify-center"
+            >
+              React
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-blue-600" data-progress="75"></span>
+            </div>
+          </div>
+          <div class="">
+            <h3
+              class="pt-20 font-semibold text-1xl text-white flex justify-center"
+            >
+              Andriod Studio
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-green-400" data-progress="70"></span>
+            </div>
+          </div>
+          <div class="">
+            <h3
+              class="pt-20 font-semibold text-1xl text-white flex justify-center"
+            >
+              Firebase
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-yellow-600" data-progress="65"></span>
+            </div>
+          </div>
+          <div class="">
+            <h3
+              class="pt-20 font-semibold text-1xl text-white flex justify-center"
+            >
+              Git
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-red-600" data-progress="75"></span>
+            </div>
+          </div>
+          <div class="">
+            <h3
+              class="pt-20 font-semibold text-1xl text-white flex justify-center"
+            >
+              MongoDB
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-green-400" data-progress="60"></span>
+            </div>
+          </div>
+          <div class="">
+            <h3
+              class="pt-20 font-semibold text-1xl text-white flex justify-center"
+            >
+              Web-Scraping (BS4, Jsoup, Puppeteer)
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-zinc-600" data-progress="90"></span>
+            </div>
+          </div>
+        </div>
+        <div class="font-semibold ml-[4vw] mr-[4vw]">
+          <div class="">
+            <h2
+              class="text-white font-semibold text-[2vw] flex justify-center m-10"
+            >
+              Soft Skills
+            </h2>
+          </div>
+          <h3 class="font-semibold text-1xl text-white flex justify-center">
+            Leadership
+          </h3>
+
+          <div class="animated-progress">
+            <span class="bg-blue-700" data-progress="90"></span>
+          </div>
+          <div class="">
+            <h3
+              class="pt-20 font-semibold text-1xl text-white flex justify-center"
+            >
+              Organization
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-blue-400" data-progress="75"></span>
+            </div>
+          </div>
+          <div class="">
+            <h3
+              class="pt-20 font-semibold text-1xl text-white flex justify-center"
+            >
+              Collaboration
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-yellow-500" data-progress="85"></span>
+            </div>
+          </div>
+          <div class="">
+            <h3
+              class="pt-20 font-semibold text-1xl text-white flex justify-center"
+            >
+              Communication
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-green-400" data-progress="85"></span>
+            </div>
+          </div>
+          <div class="">
+            <h3
+              class="pt-20 font-semibold text-1xl text-white flex justify-center"
+            >
+              Problem Solving
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-red-500" data-progress="80"></span>
+            </div>
+          </div>
+          <div class="">
+            <h3
+              class="pt-20 font-semibold text-1xl text-white flex justify-center"
+            >
+              Adaptability
+            </h3>
+
+            <div class="animated-progress">
+              <span class="bg-yellow-600" data-progress="75"></span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="grid grid-cols-3">
-      <div class="font-semibold ml-[4vw] mr-[4vw]">
-        <div>
-          <h2 class="text-white font-semibold text-[2vw] flex justify-center mt-10">
-            Programming Languages
-          </h2>
-        </div>
-        <div class="">
-          <h3 class="pt-10 font-semibold text-1xl text-white flex justify-center">
-            Java
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-red-500" data-progress="90"></span>
-          </div>
-        </div>
-        <div class="">
-          <h3 class="pt-20 font-semibold text-1xl text-white flex justify-center">
-            Python
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-blue-600" data-progress="75"></span>
-          </div>
-        </div>
-        <div class="">
-          <h3 class="pt-20 font-semibold text-1xl text-white flex justify-center">
-            C
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-blue-400" data-progress="50"></span>
-          </div>
-        </div>
-        <div class="">
-          <h3 class="pt-20 font-semibold text-1xl text-white flex justify-center">
-            C++
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-blue-400" data-progress="30"></span>
-          </div>
-        </div>
-        <div class="">
-          <h3 class="pt-20 font-semibold text-1xl text-white flex justify-center">
-            Javascript
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-yellow-500" data-progress="80"></span>
-          </div>
-        </div>
-        <div class="">
-          <h3 class="pt-20 font-semibold text-1xl text-white flex justify-center">
-            Web-Dev (HTML/CSS)
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-red-400" data-progress="75"></span>
-          </div>
-        </div>
-      </div>
-      <div class="font-semibold ml-[4vw] mr-[4vw]">
-        <div class="">
-          <h2 class="text-white font-semibold text-[2vw] flex justify-center mt-10">
-            Frameworks /Libraries
-          </h2>
-        </div>
-        <div class="">
-          <h3 class="pt-10 font-semibold text-1xl text-white flex justify-center">
-            SpringBoot Framework
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-green-600" data-progress="85"></span>
-          </div>
-        </div>
-        <div class="">
-          <h3 class="pt-20 font-semibold text-1xl text-white flex justify-center">
-            Flask
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-zinc-600" data-progress="65"></span>
-          </div>
-        </div>
-        <div class="">
-          <h3 class="pt-20 font-semibold text-1xl text-white flex justify-center">
-            React
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-blue-600" data-progress="75"></span>
-          </div>
-        </div>
-        <div class="">
-          <h3 class="pt-20 font-semibold text-1xl text-white flex justify-center">
-            Andriod Studio
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-green-400" data-progress="70"></span>
-          </div>
-        </div>
-        <div class="">
-          <h3 class="pt-20 font-semibold text-1xl text-white flex justify-center">
-            Firebase
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-yellow-600" data-progress="65"></span>
-          </div>
-        </div>
-        <div class="">
-          <h3 class="pt-20 font-semibold text-1xl text-white flex justify-center">
-            Git
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-red-600" data-progress="75"></span>
-          </div>
-        </div>
-        <div class="">
-          <h3 class="pt-20 font-semibold text-1xl text-white flex justify-center">
-            MongoDB
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-green-400" data-progress="60"></span>
-          </div>
-        </div>
-        <div class="">
-          <h3 class="pt-20 font-semibold text-1xl text-white flex justify-center">
-            Web-Scraping (BS4, Jsoup, Puppeteer)
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-zinc-600" data-progress="90"></span>
-          </div>
-        </div>
-      </div>
-      <div class="font-semibold ml-[4vw] mr-[4vw]">
-        <div class="">
-          <h2 class="text-white font-semibold text-[2vw] flex justify-center m-10">
-            Soft Skills
-          </h2>
-        </div>
-        <h3 class="font-semibold text-1xl text-white flex justify-center">
-          Leadership
-        </h3>
-
-        <div class="animated-progress">
-          <span class="bg-blue-700" data-progress="90"></span>
-        </div>
-        <div class="">
-          <h3 class="pt-20 font-semibold text-1xl text-white flex justify-center">
-            Organization
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-blue-400" data-progress="75"></span>
-          </div>
-        </div>
-        <div class="">
-          <h3 class="pt-20 font-semibold text-1xl text-white flex justify-center">
-            Collaboration
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-yellow-500" data-progress="85"></span>
-          </div>
-        </div>
-        <div class="">
-          <h3 class="pt-20 font-semibold text-1xl text-white flex justify-center">
-            Communication
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-green-400" data-progress="85"></span>
-          </div>
-        </div>
-        <div class="">
-          <h3 class="pt-20 font-semibold text-1xl text-white flex justify-center">
-            Problem Solving
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-red-500" data-progress="80"></span>
-          </div>
-        </div>
-        <div class="">
-          <h3 class="pt-20 font-semibold text-1xl text-white flex justify-center">
-            Adaptability
-          </h3>
-
-          <div class="animated-progress">
-            <span class="bg-yellow-600" data-progress="75"></span>
-          </div>
-        </div>
-      </div>
+    <div class="bg-white grid place-items-center">
+      <span class="font-semibold text-1xl bottom-0">Derek Li</span>
+      <a style="font-size: 36px" class="fa" href="https://github.com/rejieli"
+        >&#xf09b;</a
+      >
+      <a
+        style="font-size: 36px"
+        class="fa"
+        href="https://www.linkedin.com/in/derek-li2/"
+        >&#xf08c;</a
+      >
     </div>
-  </div>
-  <div class="bg-white grid place-items-center">
-    <span class="font-semibold text-1xl bottom-0">Derek Li</span>
-    <a style="font-size: 36px" class="fa" href="https://github.com/rejieli">&#xf09b;</a>
-    <a style="font-size: 36px" class="fa" href="https://www.linkedin.com/in/derek-li2/">&#xf08c;</a>
-  </div>
-</body>
+  </body>
 
-<script>
-
-  var readMore = document.getElementsByClassName("readMore");
-  for (var i = 0; i < readMore.length; i++) {
-    readMore[i].onclick = function () {
-      $(this).children("p:first").children("span:first").css({ 'display': 'inline' });
-      $(this).children("button:first").css({ "display": "none" })
+  <script>
+    var readMore = document.getElementsByClassName("readMore");
+    for (var i = 0; i < readMore.length; i++) {
+      readMore[i].onclick = function () {
+        $(this)
+          .children("p:first")
+          .children("span:first")
+          .css({ display: "inline" });
+        $(this).children("button:first").css({ display: "none" });
+      };
     }
-  }
 
-  function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
 
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 50;
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 50;
 
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        }
       }
     }
-  }
 
-  window.addEventListener("scroll", reveal);
+    window.addEventListener("scroll", reveal);
 
-  function delay(time) {
-    return new Promise((resolve) => setTimeout(resolve, time));
-  }
+    function delay(time) {
+      return new Promise((resolve) => setTimeout(resolve, time));
+    }
 
-  var swe = document.getElementById("swe");
-  delay(500).then(() => {
-    swe.classList.remove("invisible");
-    swe.classList.add("typewriter", "visible");
-  });
-
-  function progress() {
-    $(".animated-progress span").each(function () {
-      var windowHeight = window.innerHeight;
-      var elementTop = $(this)[0].getBoundingClientRect().top;
-      if (elementTop < windowHeight) {
-        $(this).animate(
-          {
-            width: $(this).attr("data-progress") + "%",
-          },
-          1000
-        );
-        $(this).text($(this).attr("data-progress") + "%");
-      }
+    var swe = document.getElementById("swe");
+    delay(500).then(() => {
+      swe.classList.remove("invisible");
+      swe.classList.add("typewriter", "visible");
     });
-  }
 
-  window.addEventListener("scroll", progress);
-</script>
+    function progress() {
+      $(".animated-progress span").each(function () {
+        var windowHeight = window.innerHeight;
+        var elementTop = $(this)[0].getBoundingClientRect().top;
+        if (elementTop < windowHeight) {
+          $(this).animate(
+            {
+              width: $(this).attr("data-progress") + "%",
+            },
+            1000
+          );
+          $(this).text($(this).attr("data-progress") + "%");
+        }
+      });
+    }
 
+    window.addEventListener("scroll", progress);
+  </script>
 </html>
