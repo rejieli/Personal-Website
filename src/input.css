@@ -6,7 +6,9 @@ html {
   scroll-behavior: smooth;
 }
 
-#more {display: none;}
+#more {
+  display: none;
+}
 
 body::-webkit-scrollbar {
   display: none;
@@ -168,7 +170,7 @@ div.tech > img {
 #cards {
   list-style: none;
   outline: calc(var(--outline-width) * 10) solid blue;
-
+  place-items: center;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(var(--numcards), var(--card-height));
@@ -184,12 +186,12 @@ div.tech > img {
   color: rgb(10, 5, 7);
   border-radius: 1em;
   overflow: hidden;
-  height:60vh;
+  height: 60vh;
   display: grid;
   grid-template-areas: "text img";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-
+  max-width: 1600px;
   align-items: stretch;
   outline: var(--outline-width) solid lime;
 }
@@ -302,4 +304,76 @@ div.tech > img {
   position: sticky;
   top: 5vh;
   padding-right: calc(var(--index) * var(--work-right-offset));
+}
+
+.tabs {
+  display: flex;
+  justify-content: center; /* Center the tabs horizontally */
+  margin-bottom: 20px; /* Add some space below the tabs */
+}
+.tab {
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 25px;
+  margin-right: 10px;
+  transition: 0.1s linear;
+  color: #fff;
+  font-weight: 700;
+}
+.tab.active {
+  background-color: #2b6cb0;
+}
+.tab-content {
+  display: none;
+  justify-content: center; /* Center the squares horizontally */
+  align-items: center; /* Center the squares vertically */
+  flex-wrap: wrap; /* Allow squares to wrap to the next line if there are too many */
+}
+.tab-content.active {
+  display: flex; /* Display squares as a flex container */
+}
+.square {
+  width: 500px;
+  height: 500px;
+  background-color: #5e5e5e;
+  border-radius: 10px;
+  color: #fff;
+  text-align: left;
+  margin: 10px;
+  padding: 50px;
+}
+
+.square_title {
+  font-size: 30px;
+  color: #5ea6e9;
+  font-weight: 700;
+}
+.square_subtitle {
+  font-size: 15px;
+  color: #5ea6e9;
+  font-weight: 500;
+}
+.square_text {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.7em;
+}
+.small_icon {
+  max-width: 30px;
+  display: flex;
+}
+
+.small_logo {
+  max-width: 70px;
+}
+
+.small_square {
+  max-width: 150px;
+  background-color: #5e5e5e;
+  border-radius: 10px;
+  color: #fff;
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
 }
